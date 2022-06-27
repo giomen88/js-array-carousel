@@ -17,4 +17,5 @@
 .button .bi {
     font-size: 3rem;
     color: black;
+    cursor: pointer;
 }
