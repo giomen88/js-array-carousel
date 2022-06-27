@@ -1,0 +1,20 @@
+.gallery,
+.button {
+    height: 600px;
+    line-height: 600px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.gallery img.active {
+    display: block;
+}
+
+.button .bi {
+    font-size: 3rem;
+    color: black;
+}
