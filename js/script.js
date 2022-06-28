@@ -31,12 +31,16 @@ element[currentActiveIndex].classList.add('active');
 // AGGIUNGO FUNZIONE AL BUTTON NEXT
 
 nextButton.addEventListener('click', function () {
+
     element[currentActiveIndex].classList.remove('active');
 
     currentActiveIndex++;
 
-    element[currentActiveIndex].classList.add('active');
+    if (currentActiveIndex === element.length) {
+        currentActiveIndex = 0;
+    }
 
+    element[currentActiveIndex].classList.add('active');
 })
 
 /////////////////////////// CLICK BOTTONE PREV
@@ -48,7 +52,10 @@ prevButton.addEventListener('click', function () {
 
     currentActiveIndex--;
 
-    element[currentActiveIndex].classList.add('active');
+    if (currentActiveIndex < 0) {
+        currentActiveIndex = element.length - 1;
+    }
 
+    element[currentActiveIndex].classList.add('active');
 })
 
